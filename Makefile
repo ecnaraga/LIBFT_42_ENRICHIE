@@ -93,6 +93,15 @@ LINKED_LIST_SRCS  =     ft_lstadd_front.c \
                         ft_lstiter.c \
                         ft_lstmap.c
 
+DOUBLE_LINKED_LIST_DIR =    lst_two_addnew.c \
+                            lst_two_addback.c \
+                            lst_two_size.c \
+                            lst_two_delone.c \
+                            lst_two_clear.c \
+                            lst_two_iter.c \
+                            lst_two_map.c
+
+
 ############################# HANDLE DIRECTORIES ##############################
 
 SRCS_DIR          =     srcs/
