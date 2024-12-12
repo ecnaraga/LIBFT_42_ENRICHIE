@@ -93,13 +93,14 @@ LINKED_LIST_SRCS  =     ft_lstadd_front.c \
                         ft_lstiter.c \
                         ft_lstmap.c
 
-DOUBLE_LINKED_LIST_DIR =    lst_two_addnew.c \
-                            lst_two_addback.c \
-                            lst_two_size.c \
-                            lst_two_delone.c \
-                            lst_two_clear.c \
-                            lst_two_iter.c \
-                            lst_two_map.c
+DOUBLE_LINKED_LIST_DIR  =       double_linked_list/
+DOUBLE_LINKED_LIST_SRCS =       lst_two_addnew.c \
+                                lst_two_addback.c \
+                                lst_two_size.c \
+                                lst_two_delone.c \
+                                lst_two_clear.c \
+                                lst_two_iter.c \
+                                lst_two_map.c
 
 
 ############################# HANDLE DIRECTORIES ##############################
@@ -112,7 +113,8 @@ SRCS			=	$(addprefix $(PRINT_DIR), $(PRINT_SRCS)) \
 				$(addprefix $(TEST_DIR), $(TEST_SRCS)) \
 				$(addprefix $(MEMMORY_DIR), $(MEMMORY_SRCS)) \
 				$(addprefix $(ALLOC_DIR), $(ALLOC_SRCS)) \
-				$(addprefix $(LINKED_LIST_DIR), $(LINKED_LIST_SRCS))
+				$(addprefix $(LINKED_LIST_DIR), $(LINKED_LIST_SRCS)) \
+				$(addprefix $(DOUBLE_LINKED_LIST_DIR), $(DOUBLE_LINKED_LIST_SRCS))
 
 OBJS_DIR 		= 	.objs/
 
@@ -124,7 +126,8 @@ OBJS_FOLDER		=	$(addprefix $(OBJS_DIR), $(PRINT_DIR) \
                         $(TEST_DIR) \
                         $(MEMMORY_DIR) \
                         $(ALLOC_DIR) \
-                        $(LINKED_LIST_DIR))
+                        $(LINKED_LIST_DIR) \
+                        $(DOUBLE_LINKED_LIST_DIR))
 
 OBJS			= $(addprefix $(OBJS_DIR), $(OBJS_NAMES))
 
