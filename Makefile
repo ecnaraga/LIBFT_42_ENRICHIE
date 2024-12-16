@@ -20,22 +20,22 @@ PRINT_DIR         =     print/
 PRINT_SRCS        =     ft_putchar_fd.c \
                         ft_putstr_fd.c \
                         ft_putendl_fd.c \
-                        ft_putnbr_fd.c \
-                        get_next_line/get_next_line.c \
-                        get_next_line/get_next_line_multiple_fd.c \
-                        get_next_line/get_next_line_utils.c \
-                        ft_printf/ft_printf.c \
-                        ft_printf/do_print.c \
-                        ft_printf/manage_arg.c \
-                        ft_printf/ft_atoi_printf.c \
-                        ft_printf/ft_print_char.c \
-                        ft_printf/ft_print_int.c \
-                        ft_printf/check_flag.c \
-                        ft_printf/ft_print_unsignedint.c \
-                        ft_printf/ft_print_lowhexa.c \
-                        ft_printf/ft_print_upphexa.c \
-                        ft_printf/ft_print_str.c \
-                        ft_printf/ft_print_ptr.c
+                        ft_putnbr_fd.c 
+                        # get_next_line/get_next_line.c \
+                        # get_next_line/get_next_line_multiple_fd.c \
+                        # get_next_line/get_next_line_utils.c \
+                        # ft_printf/ft_printf.c \
+                        # ft_printf/do_print.c \
+                        # ft_printf/manage_arg.c \
+                        # ft_printf/ft_atoi_printf.c \
+                        # ft_printf/ft_print_char.c \
+                        # ft_printf/ft_print_int.c \
+                        # ft_printf/check_flag.c \
+                        # ft_printf/ft_print_unsignedint.c \
+                        # ft_printf/ft_print_lowhexa.c \
+                        # ft_printf/ft_print_upphexa.c \
+                        # ft_printf/ft_print_str.c \
+                        # ft_printf/ft_print_ptr.c
 
 NUMBER_DIR        =     number/
 NUMBER_SRCS       =     ft_atoi.c \
