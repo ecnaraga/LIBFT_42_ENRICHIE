@@ -48,6 +48,30 @@ void				ft_lstiter(t_list *lst, void (*f)(void *));
 t_list				*ft_lstmap(t_list *lst, void *(*f)(void *),
 						void (*del)(void *));
 
+/*DOUBLE_LINKED_LIST*/
+typedef struct s_lst_two
+{
+	struct s_lst_two	*prev;
+	void				*data;
+	struct s_lst_two	*next;
+}						t_lst_two;
+
+typedef struct s_cont
+{
+	t_lst_two			*first;
+	t_lst_two			*last;
+	int					size;
+}						t_cont;
+
+t_lst_two				*lst_two_addnew(void *data);
+void					lst_two_addback(t_cont *cont, t_lst_two *new);
+int						lst_two_size(t_cont *cont);
+void					lst_two_clear(t_lst_two **lst, void (*del)(void *));
+void					lst_two_delone(t_lst_two *lst, void (*del)(void *));
+void					lst_two_iter(t_cont *cont, void (*f)(void *));
+t_cont					lst_two_map(t_cont cont, void *(*f)(void *),
+							void (*del)(void *));
+
 /*NUMBER*/
 int					ft_atoi(const char *nptr);
 char				*ft_itoa(int n);

@@ -15,8 +15,10 @@
 void	*ft_calloc(size_t nmemb, size_t size)
 {
 	void	*array;
+	size_t	secu;
 
-	if (size != 0 && (nmemb > ((sizeof(char) * 2147483424) / size)))
+	secu = nmemb * size;
+	if (size != 0 && secu / size != nmemb)
 		return (NULL);
 	array = (void *)malloc(size * nmemb);
 	if (!array)
