@@ -25,15 +25,23 @@ PRINT_SRCS        =     ft_putchar_fd.c \
 NUMBER_DIR        =     number/
 NUMBER_SRCS       =     ft_atoi.c \
                         ft_itoa.c \
-                        digit_len.c
+                        digit_len.c \
+                        ft_abs.c \
+                        ft_dabs.c \
+                        ft_fabs.c \
+                        ft_sign.c \
+                        ft_swap_int.c
+
 
 STRING_DIR        =     string/
 STRING_SRCS       =     ft_strlen.c \
                         ft_strlcpy.c \
                         ft_strcat.c \
                         ft_strlcat.c \
+                        ft_strcmp.c \
                         ft_strncmp.c \
                         ft_split.c \
+                        ft_split_isspace.c \
                         ft_strjoin.c \
                         ft_toupper.c \
                         ft_tolower.c \
@@ -46,7 +54,8 @@ STRING_SRCS       =     ft_strlen.c \
                         ft_strmapi.c \
                         ft_is_char.c \
                         ck_char.c \
-                        ck_sset.c
+                        ck_sset.c \
+                        ft_arraylen.c
 
 TEST_DIR          =     test/
 TEST_SRCS         =     ft_isalpha.c \
