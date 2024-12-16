@@ -1,18 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_split.c                                         :+:      :+:    :+:   */
+/*   ft_split_isspace.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: galambey <galambey@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/05/02 12:14:56 by galambey          #+#    #+#             */
-/*   Updated: 2023/07/19 13:38:06 by galambey         ###   ########.fr       */
+/*   Created: 2023/06/25 11:01:59 by garance           #+#    #+#             */
+/*   Updated: 2023/08/31 13:02:13 by galambey         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../includes/libft.h"
+#include <stdio.h>
+#include <stdlib.h>
 
-static int	ft_countwords(const char *s, char c)
+static int	ft_countwords(const char *s)
 {
 	int	c_wd;
 	int	i;
@@ -21,14 +23,14 @@ static int	ft_countwords(const char *s, char c)
 	i = 0;
 	while (s[i])
 	{
-		while (s[i] && s[i] == c)
+		while (s[i] && (s[i] == ' ' || (s[i] >= '\t' && s[i] <= '\r')))
 			i++;
-		if (s[i] && s[i] != c)
+		if (s[i] && (s[i] != ' ' && (s[i] < '\t' || s[i] > '\r')))
 		{
 			c_wd++;
 			i++;
 		}
-		while (s[i] && s[i] != c)
+		while (s[i] && (s[i] != ' ' && (s[i] < '\t' || s[i] > '\r')))
 			i++;
 	}
 	return (c_wd);
@@ -41,14 +43,14 @@ static void	*ft_free_strs(char **strs, int j)
 	i = 0;
 	while (i < j)
 	{
-		free (strs[i]);
+		free(strs[i]);
 		i++;
 	}
-	free (strs);
+	free(strs);
 	return (NULL);
 }
 
-static char	**ft_split_strs(const char *s, char c, char **strs, int c_wd)
+static char	**ft_split_strs(const char *s, char **strs, int c_wd)
 {
 	int	j;
 	int	c_lt;
@@ -57,9 +59,9 @@ static char	**ft_split_strs(const char *s, char c, char **strs, int c_wd)
 	while (*s && ++j < c_wd)
 	{
 		c_lt = 0;
-		while (*s && *s == c)
+		while (*s && (*s == ' ' || (*s >= '\t' && *s <= '\r')))
 			s++;
-		while (*s && *s != c)
+		while (*s && (*s != ' ' && (*s < '\t' || *s > '\r')))
 		{
 			c_lt++;
 			s++;
@@ -69,29 +71,24 @@ static char	**ft_split_strs(const char *s, char c, char **strs, int c_wd)
 			strs[j] = (char *)malloc(sizeof(char) * (c_lt + 1));
 			if (strs[j] == NULL)
 				return (ft_free_strs(strs, j));
-			ft_strlcpy (strs[j], s - c_lt, c_lt + 1);
+			ft_strlcpy(strs[j], s - c_lt, c_lt + 1);
 		}
 	}
 	return (strs);
 }
 
-char	**ft_split(char const *s, char c)
+char	**ft_split_isspace(char const *s)
 {
 	int		c_wd;
 	char	**strs;
 
 	if (!s)
 		return (NULL);
-	if (!c && s[0] == '\0')
-			c_wd = 0;
-	else if (!c)
-		c_wd = 1;
-	else
-		c_wd = ft_countwords(s, c);
+	c_wd = ft_countwords(s);
 	strs = (char **)malloc(sizeof(char *) * (c_wd + 1));
 	if (strs == NULL)
 		return (NULL);
-	if (ft_split_strs(s, c, strs, c_wd) == NULL)
+	if (ft_split_strs(s, strs, c_wd) == NULL)
 		return (NULL);
 	strs[c_wd] = NULL;
 	return (strs);

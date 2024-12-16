@@ -71,6 +71,11 @@ t_cont					lst_two_map(t_cont cont, void *(*f)(void *),
 int					ft_atoi(const char *nptr);
 char				*ft_itoa(int n);
 void				digit_len(unsigned int *n, int *count, unsigned int base);
+void				ft_swap_int(int *a, int *b);
+int					ft_abs(int n);
+double				ft_dabs(double n);
+float				ft_fabs(float n);
+int					ft_sign(int n);
 
 /*MEMMORY*/
 void				*ft_memset(void *s, int c, size_t n);
@@ -86,20 +91,16 @@ void				ft_putstr_fd(char *s, int fd);
 void				ft_putendl_fd(char *s, int fd);
 void				ft_putnbr_fd(int n, int fd);
 
-/*		-GET_NEXT_LINE*/
-char				*get_next_line(int fd);
-char				*get_next_line_multiple_fd(int fd);
-size_t				ft_strlen_gnl(const char *s);
-char				*ft_strjoin_gnl(char const *s1, char const *s2, int i);
-void				ft_strcpy_gnl(char *dst, const char *src);
-
 /*STRING*/
 size_t				ft_strlen(const char *s);
+int					ft_arraylen(char **array);
 size_t				ft_strlcpy(char *dst, const char *src, size_t size);
 char				*ft_strcat(char *dst, const char *src);
 size_t				ft_strlcat(char *dst, const char *src, size_t size);
+int					ft_strcmp(const char *s1, const char *s2);
 int					ft_strncmp(const char *s1, const char *s2, size_t n);
 char				**ft_split(char const *s, char c);
+char				**ft_split_isspace(char const *s);
 char				*ft_strjoin(char const *s1, char const *s2);
 char				*ft_strtrim(char const *s1, char const *set);
 char				*ft_substr(char const *s, unsigned int start, size_t len);
