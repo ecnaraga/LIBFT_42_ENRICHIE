@@ -13,14 +13,9 @@
 #ifndef LIBFT_H
 # define LIBFT_H
 
-# include <fcntl.h>
 # include <stdlib.h>
 # include <string.h>
-# include <sys/stat.h>
-# include <sys/types.h>
 # include <unistd.h>
-# include <stdarg.h>
-# include <stdint.h>
 
 # ifndef BUFFER_SIZE
 #  define BUFFER_SIZE 50
@@ -97,34 +92,6 @@ char				*get_next_line_multiple_fd(int fd);
 size_t				ft_strlen_gnl(const char *s);
 char				*ft_strjoin_gnl(char const *s1, char const *s2, int i);
 void				ft_strcpy_gnl(char *dst, const char *src);
-
-// /*		-FT_PRINTF*/
-// typedef struct a_list
-// {
-// 	void			*content;
-// 	int				len;
-// 	char			*flag;
-// 	long int		nb;
-// 	long int		prec;
-// }					t_aglist;
-
-// typedef int		(*t_print)(t_aglist *ag);
-
-// int					ft_printf(const char *s, ...);
-// int					ft_arg(va_list ap, char *s, int *count);
-// int					ft_make_arg(t_aglist *ag, char *s, int *i);
-// int					ft_free_arg(t_aglist *ag, int result);
-// long int			ft_atoi_printf(char *s);
-// int					ck_front_flag(t_aglist *ag, unsigned int j, int id);
-// int					ck_back_flag(t_aglist *ag, int j);
-// int					print_char(t_aglist *ag);
-// int					ft_print_char(void *c);
-// int					print_str(t_aglist *ag);
-// int					print_ptr(t_aglist *ag);
-// int					print_int(t_aglist *ag);
-// int					print_unsignedint(t_aglist *ag);
-// int					print_lowhexa(t_aglist *ag);
-// int					print_upphexa(t_aglist *ag);
 
 /*STRING*/
 size_t				ft_strlen(const char *s);
