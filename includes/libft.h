@@ -124,7 +124,7 @@ char				*ft_random_string(int n);
 void				ft_replace_char(char *str, char to_replace, char new);
 
 /*FILE*/
-char	*ft_random_filename(char *path, int n)
+char				*ft_random_filename(char *path, int n);
 
 /*TEST*/
 int					ft_isalpha(int c);
