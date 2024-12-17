@@ -64,6 +64,9 @@ STRING_SRCS       =     ft_strlen.c \
                         ft_random_string.c \
                         ft_replace_char.c
 
+FILE_DIR          =     file/
+FILE_SRCS         =     ft_random_filename.c
+
 TEST_DIR          =     test/
 TEST_SRCS         =     ft_isalpha.c \
                         ft_isdigit.c \
@@ -111,6 +114,7 @@ SRCS_DIR          =     srcs/
 SRCS			=	$(addprefix $(PRINT_DIR), $(PRINT_SRCS)) \
 				$(addprefix $(NUMBER_DIR), $(NUMBER_SRCS)) \
 				$(addprefix $(STRING_DIR), $(STRING_SRCS)) \
+				$(addprefix $(FILE_DIR), $(FILE_SRCS)) \
 				$(addprefix $(TEST_DIR), $(TEST_SRCS)) \
 				$(addprefix $(MEMMORY_DIR), $(MEMMORY_SRCS)) \
 				$(addprefix $(ALLOC_DIR), $(ALLOC_SRCS)) \
@@ -124,6 +128,7 @@ OBJS_NAMES 		= 	$(SRCS:.c=.o)
 OBJS_FOLDER		=	$(addprefix $(OBJS_DIR), $(PRINT_DIR) \
                         $(NUMBER_DIR) \
                         $(STRING_DIR) \
+                        $(FILE_DIR) \
                         $(TEST_DIR) \
                         $(MEMMORY_DIR) \
                         $(ALLOC_DIR) \
