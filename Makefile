@@ -35,14 +35,19 @@ NUMBER_SRCS       =     ft_atoi.c \
 
 STRING_DIR        =     string/
 STRING_SRCS       =     ft_strlen.c \
+                        ft_strlen_afr_char.c \
+                        ft_strlen_bfr_char.c \
                         ft_strlcpy.c \
                         ft_strcat.c \
                         ft_strlcat.c \
                         ft_strcmp.c \
                         ft_strncmp.c \
                         ft_split.c \
-                        ft_split_isspace.c \
+                        ft_split_iss.c \
+                        ft_free_split.c \
                         ft_strjoin.c \
+                        ft_strjoin_aftr_char.c \
+                        ft_strjoin_bfr_char.c \
                         ft_toupper.c \
                         ft_tolower.c \
                         ft_strchr.c \
@@ -55,7 +60,9 @@ STRING_SRCS       =     ft_strlen.c \
                         ft_is_char.c \
                         ck_char.c \
                         ck_sset.c \
-                        ft_arraylen.c
+                        ft_arraylen.c \
+                        ft_random_string.c \
+                        ft_replace_char.c
 
 TEST_DIR          =     test/
 TEST_SRCS         =     ft_isalpha.c \

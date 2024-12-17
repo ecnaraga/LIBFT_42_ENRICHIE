@@ -11,8 +11,6 @@
 /* ************************************************************************** */
 
 #include "../../includes/libft.h"
-#include <stdio.h>
-#include <stdlib.h>
 
 static int	ft_countwords(const char *s)
 {
@@ -77,7 +75,7 @@ static char	**ft_split_strs(const char *s, char **strs, int c_wd)
 	return (strs);
 }
 
-char	**ft_split_isspace(char const *s)
+char	**ft_split_iss(char const *s)
 {
 	int		c_wd;
 	char	**strs;

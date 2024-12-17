@@ -13,9 +13,11 @@
 #ifndef LIBFT_H
 # define LIBFT_H
 
+# include <stdio.h>
 # include <stdlib.h>
 # include <string.h>
 # include <unistd.h>
+# include <fcntl.h>
 
 # ifndef BUFFER_SIZE
 #  define BUFFER_SIZE 50
@@ -93,6 +95,8 @@ void				ft_putnbr_fd(int n, int fd);
 
 /*STRING*/
 size_t				ft_strlen(const char *s);
+size_t				ft_strlen_afr_char(const char *str, char c);
+size_t				ft_strlen_bfr_char(const char *str, char c);
 int					ft_arraylen(char **array);
 size_t				ft_strlcpy(char *dst, const char *src, size_t size);
 char				*ft_strcat(char *dst, const char *src);
@@ -100,8 +104,11 @@ size_t				ft_strlcat(char *dst, const char *src, size_t size);
 int					ft_strcmp(const char *s1, const char *s2);
 int					ft_strncmp(const char *s1, const char *s2, size_t n);
 char				**ft_split(char const *s, char c);
-char				**ft_split_isspace(char const *s);
+char				**ft_split_iss(char const *s);
+void				*ft_free_split(char **strs);
 char				*ft_strjoin(char const *s1, char const *s2);
+char				*ft_strjoin_aftr_char(char const *s1, char const *s2, char c);
+char				*ft_strjoin_bfr_char(char const *s1, char const *s2, char c);
 char				*ft_strtrim(char const *s1, char const *set);
 char				*ft_substr(char const *s, unsigned int start, size_t len);
 void				ft_striteri(char *s, void (*f)(unsigned int, char *));
@@ -113,6 +120,8 @@ char				*ft_strnstr(const char *big, const char *little,
 int					ft_is_char(char *buffer, char c);
 int					ck_char(char *s, char c);
 int					ck_sset(char *s, char *set);
+char				*ft_random_string(int n);
+void				ft_replace_char(char *str, char to_replace, char new);
 
 /*TEST*/
 int					ft_isalpha(int c);
