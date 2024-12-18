@@ -24,6 +24,7 @@ PRINT_SRCS        =     ft_putchar_fd.c \
 
 NUMBER_DIR        =     number/
 NUMBER_SRCS       =     ft_atoi.c \
+                        ft_atoi_handle_overflow.c \
                         ft_itoa.c \
                         digit_len.c \
                         ft_abs.c \

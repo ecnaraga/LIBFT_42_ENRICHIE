@@ -18,6 +18,8 @@
 # include <string.h>
 # include <unistd.h>
 # include <fcntl.h>
+# include <limits.h>
+# include <stdint.h>
 
 # ifndef BUFFER_SIZE
 #  define BUFFER_SIZE 50
@@ -71,6 +73,7 @@ t_cont					lst_two_map(t_cont cont, void *(*f)(void *),
 
 /*NUMBER*/
 int					ft_atoi(const char *nptr);
+int					ft_atoi_handle_overflow(const char *nptr, int *err);
 char				*ft_itoa(int n);
 void				digit_len(unsigned int *n, int *count, unsigned int base);
 void				ft_swap_int(int *a, int *b);
