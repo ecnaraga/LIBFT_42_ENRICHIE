@@ -73,6 +73,8 @@ FILE_SRCS         =     ft_random_filename.c
 
 TEST_DIR          =     test/
 TEST_SRCS         =     ft_isalpha.c \
+                        ft_islower.c \
+                        ft_isupp.c \
                         ft_isdigit.c \
                         ft_isalnum.c \
                         ft_isascii.c \
