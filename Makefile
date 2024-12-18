@@ -38,6 +38,7 @@ STRING_SRCS       =     ft_strlen.c \
                         ft_strlen_afr_char.c \
                         ft_strlen_bfr_char.c \
                         ft_strlcpy.c \
+                        ft_strcpy.c \
                         ft_strcat.c \
                         ft_strlcat.c \
                         ft_strcmp.c \
@@ -48,12 +49,15 @@ STRING_SRCS       =     ft_strlen.c \
                         ft_strjoin.c \
                         ft_strjoin_aftr_char.c \
                         ft_strjoin_bfr_char.c \
+                        ft_strjoin_char.c \
                         ft_toupper.c \
                         ft_tolower.c \
                         ft_strchr.c \
                         ft_strrchr.c \
                         ft_strnstr.c \
                         ft_strtrim.c \
+                        ft_strtrim_except_tips.c \
+                        ft_strtrim_exept_set.c \
                         ft_substr.c \
                         ft_striteri.c \
                         ft_strmapi.c \

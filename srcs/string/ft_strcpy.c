@@ -1,32 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ck_char.c                                          :+:      :+:    :+:   */
+/*   ft_strcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: galambey <galambey@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/06/23 16:18:11 by galambey          #+#    #+#             */
-/*   Updated: 2023/06/23 16:18:17 by galambey         ###   ########.fr       */
+/*   Created: 2023/05/02 12:17:26 by galambey          #+#    #+#             */
+/*   Updated: 2023/12/06 13:04:04 by galambey         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/*
-Return 0 if c is absent in the string
-*/
-int	ck_char(char *s, char c)
-{
-	int	i;
-	int	count;
+#include "../../includes/libft.h"
 
-	i = -1;
-	count = 0;
-	if (s)
+char	*ft_strcpy(char *dst, const char *src)
+{
+	size_t	i;
+
+	i = 0;
+	while (src[i])
 	{
-		while (s[++i])
-		{
-			if (s[i] == c)
-				count++;
-		}
+		dst[i] = src[i];
+		i++;
 	}
-	return (count);
+	dst[i] = '\0';
+	return (dst);
 }

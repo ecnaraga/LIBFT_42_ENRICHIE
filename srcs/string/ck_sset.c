@@ -10,6 +10,10 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+/*
+Return -1 if there's no char of the set in the string s, otherwise return a
+	other value
+*/
 int	ck_sset(char *s, char *set)
 {
 	int	i;
